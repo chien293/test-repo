@@ -35,7 +35,7 @@ export default function Home() {
           Mở Fairness Popup
         </button>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-2xl">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-4xl">
           <Link
             href="/hooks-demo"
             className="p-6 border-2 border-blue-200 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors"
@@ -53,6 +53,16 @@ export default function Home() {
             <h3 className="text-xl font-bold mb-2 text-green-800">Advanced Hooks</h3>
             <p className="text-sm text-gray-600">
               useTransition, useDeferredValue, useOptimistic và Server Actions
+            </p>
+          </Link>
+
+          <Link
+            href="/confetti-demo"
+            className="p-6 border-2 border-pink-200 rounded-lg bg-pink-50 hover:bg-pink-100 transition-colors"
+          >
+            <h3 className="text-xl font-bold mb-2 text-pink-800">🎊 Confetti Popup Demo</h3>
+            <p className="text-sm text-gray-600">
+              Trải nghiệm popup chúc mừng với hiệu ứng confetti đẹp mắt
             </p>
           </Link>
         </div>
@@ -109,6 +119,19 @@ export default function Home() {
             height={16}
           />
           Advanced Hooks
+        </Link>
+        <Link
+          href="/confetti-demo"
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+        >
+          <Image
+            aria-hidden
+            src="/globe.svg"
+            alt="Confetti icon"
+            width={16}
+            height={16}
+          />
+          Confetti Demo
         </Link>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
