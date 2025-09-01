@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import FairnessPopup from "./components/FairnessPopup";
+import SimpleChipBox from "./components/SimpleChipBox";
 
 export default function Home() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -25,6 +26,14 @@ export default function Home() {
           <p className="text-lg text-gray-600 mb-6">
             Khám phá các tính năng mới của React 19 và Next.js 15
           </p>
+        </div>
+
+        {/* Chip Box 3D Preview */}
+        <div className="w-full max-w-2xl mx-auto mb-8">
+          <h2 className="text-xl font-semibold text-center mb-4 text-gray-700">
+            🎰 Hộp Lắc Chip 3D Preview
+          </h2>
+          <SimpleChipBox />
         </div>
 
         {/* Fairness Popup Button */}
@@ -63,6 +72,26 @@ export default function Home() {
             <h3 className="text-xl font-bold mb-2 text-pink-800">🎊 Confetti Popup Demo</h3>
             <p className="text-sm text-gray-600">
               Trải nghiệm popup chúc mừng với hiệu ứng confetti đẹp mắt
+            </p>
+          </Link>
+          
+          <Link
+            href="/chip-shaker-demo"
+            className="p-6 border-2 border-orange-200 rounded-lg bg-orange-50 hover:bg-orange-100 transition-colors"
+          >
+            <h3 className="text-xl font-bold mb-2 text-orange-800">🎰 Chip Shaker Animation</h3>
+            <p className="text-sm text-gray-600">
+              Animation lắc chip với 100 frames hình ảnh có sẵn
+            </p>
+          </Link>
+          
+          <Link
+            href="/spine-demo"
+            className="p-6 border-2 border-purple-200 rounded-lg bg-purple-50 hover:bg-purple-100 transition-colors"
+          >
+            <h3 className="text-xl font-bold mb-2 text-purple-800">🐉 Spine Animation Demo</h3>
+            <p className="text-sm text-gray-600">
+              Render Spine animation với Three.js và React Three Fiber
             </p>
           </Link>
         </div>
@@ -132,6 +161,32 @@ export default function Home() {
             height={16}
           />
           Confetti Demo
+        </Link>
+        <Link
+          href="/chip-shaker-demo"
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+        >
+          <Image
+            aria-hidden
+            src="/globe.svg"
+            alt="Chip Shaker icon"
+            width={16}
+            height={16}
+          />
+          Chip Shaker Animation
+        </Link>
+        <Link
+          href="/spine-demo"
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+        >
+          <Image
+            aria-hidden
+            src="/globe.svg"
+            alt="Spine icon"
+            width={16}
+            height={16}
+          />
+          Spine Animation
         </Link>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
